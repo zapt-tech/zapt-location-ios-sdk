@@ -1,5 +1,5 @@
 //
-//  BeaconNotifier.h
+//  ZTHttpService.h
 //  Pods
 //
 //  Created by BRUNO CARNEIRO on 25/07/19.
@@ -11,12 +11,14 @@
 
 #import "ZTLogger.h"
 
-@interface ZTBeaconNotifier : NSObject
+@interface ZTHttpService : NSObject
 
 @property BOOL debugLogEnabled;
 @property (retain, readonly) ZTLogger *logger;
 
-- (void) didRangeBeacons:(NSMutableDictionary *)beacons;
+- (void) createMeasurementsRequest:(NSMutableDictionary *)beacons;
+
+- (void) createExitRequest:(NSString *)userId;
 
 @end
 
