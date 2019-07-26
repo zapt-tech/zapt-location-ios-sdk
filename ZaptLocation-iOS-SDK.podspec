@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|  
     s.name              = 'ZaptLocation-iOS-SDK'
-    s.version           = '0.0.1'
+    s.version           = '0.0.2'
     s.summary           = 'SDK for indoor positioning'
     s.homepage          = 'http://docs.zapt.tech/'
 
