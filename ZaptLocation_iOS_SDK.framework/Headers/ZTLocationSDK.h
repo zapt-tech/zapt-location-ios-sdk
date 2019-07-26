@@ -8,7 +8,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-#import "ZTBeaconNotifier.h"
+#import "ZTHttpService.h"
 #import "ZTLogger.h"
 
 //! Project version number for ZaptLocation_iOS_SDK.
@@ -36,7 +36,7 @@ FOUNDATION_EXPORT const unsigned char ZaptLocation_iOS_SDKVersionString[];
 @property (retain) CBPeripheralManager *peripheralManager;
 @property (retain) CLRegion *advertisedBeaconRegion;
 @property (retain) NSDictionary *advertisedPeripheralData;
-@property (retain) ZTBeaconNotifier *notifier;
+@property (retain) ZTHttpService *notifier;
 
 - (void)start;
 - (void)stop;
