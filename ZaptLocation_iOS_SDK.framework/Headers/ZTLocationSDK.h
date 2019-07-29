@@ -21,11 +21,11 @@ FOUNDATION_EXPORT const unsigned char ZaptLocation_iOS_SDKVersionString[];
     
 }
 
+@property (retain) NSString *visitableId;
+
 @property (retain) NSOperationQueue *queue;
 
 @property (retain) CLLocationManager *locationManager;
-
-@property (retain) NSString* delegateCallbackId;
 
 @property (retain, readonly) ZTLogger *logger;
 
@@ -33,15 +33,15 @@ FOUNDATION_EXPORT const unsigned char ZaptLocation_iOS_SDKVersionString[];
 
 @property BOOL debugNotificationsEnabled;
 
-@property (retain) CBPeripheralManager *peripheralManager;
-@property (retain) CLRegion *advertisedBeaconRegion;
-@property (retain) NSDictionary *advertisedPeripheralData;
 @property (retain) ZTHttpService *notifier;
 
+- (instancetype)initWithVisitableId :(NSString *)visitableId;
 - (void)start;
 - (void)stop;
+- (NSString*)getMapLink;
+- (NSString*)getInterestLink:(NSString *)interestId;
+
 
 - (ZTLogger*) getLogger;
 
 @end
-
