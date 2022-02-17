@@ -13,8 +13,11 @@
 
 @interface ZTHttpService : NSObject
 
+@property (retain) NSString *visitableId;
 @property BOOL debugLogEnabled;
 @property (retain, readonly) ZTLogger *logger;
+
+- (instancetype)initWithVisitableId :(NSString *)visitableId;
 
 - (void) createMeasurementsRequest:(NSMutableDictionary *)beacons;
 
