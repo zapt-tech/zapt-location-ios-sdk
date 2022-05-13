@@ -41,6 +41,7 @@ FOUNDATION_EXPORT const unsigned char ZaptLocation_iOS_SDKVersionString[];
 - (void)start;
 - (void)stop;
 - (void)requestPermissions;
+- (void)requestPermissionsBackground;
 - (NSString*)getMapLink;
 - (NSString*)getInterestLink:(NSString *)interestId;
 
