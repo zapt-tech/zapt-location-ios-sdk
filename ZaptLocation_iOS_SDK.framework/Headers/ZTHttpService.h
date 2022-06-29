@@ -19,7 +19,8 @@
 
 - (instancetype)initWithVisitableId :(NSString *)visitableId;
 
-- (void) createMeasurementsRequest:(NSMutableDictionary *)beacons;
+- (void) createMeasurementsRequest:(NSMutableDictionary *)beacons withDisableSyncingForPositioning:(BOOL)disableSyncingForPositioning
+    withDisableSyncingForAnalytics:(BOOL)disableSyncingForAnalytics;
 
 - (void) createExitRequest:(NSString *)userId;
 
