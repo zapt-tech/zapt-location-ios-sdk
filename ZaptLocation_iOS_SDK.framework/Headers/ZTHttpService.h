@@ -19,6 +19,8 @@
 
 - (instancetype)initWithVisitableId :(NSString *)visitableId;
 
+- (void) createInitSDKRequest:(BOOL)disableSyncingForAnalytics;
+
 - (void) createMeasurementsRequest:(NSMutableDictionary *)beacons withDisableSyncingForPositioning:(BOOL)disableSyncingForPositioning
     withDisableSyncingForAnalytics:(BOOL)disableSyncingForAnalytics;
 
