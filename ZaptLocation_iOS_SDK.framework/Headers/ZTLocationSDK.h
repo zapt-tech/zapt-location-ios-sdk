@@ -10,6 +10,7 @@
 
 #import "ZTHttpService.h"
 #import "ZTLogger.h"
+#import <WebKit/WebKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -59,6 +60,10 @@ FOUNDATION_EXPORT const unsigned char ZaptLocation_iOS_SDKVersionString[];
 - (NSString*)getMapLink;
 - (NSString*)getInterestLink:(NSString *)interestId;
 
+/// Attaches the SDK-managed web view bridges to the provided web view.
+- (void)attachWebViewBridges:(WKWebView *)webView;
+/// Detaches SDK-managed web view bridges from any attached web view.
+- (void)detachWebViewBridges;
 
 - (ZTLogger*) getLogger;
 
