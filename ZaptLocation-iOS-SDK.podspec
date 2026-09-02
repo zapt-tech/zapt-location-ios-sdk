@@ -12,9 +12,8 @@ Pod::Spec.new do |s|
     s.platform          = :ios
     s.source            = { :git => "https://github.com/zapt-tech/zapt-location-ios-sdk.git", :tag => "0.0.14" }
 
-    s.ios.deployment_target = '9.0'
-    s.ios.vendored_frameworks = 'ZaptLocation_iOS_SDK.framework'
-    s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64', 'DEFINES_MODULE' => 'YES' }
-    s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+    s.ios.deployment_target = '13.0'
+    s.ios.vendored_frameworks = 'ZaptLocation_iOS_SDK.xcframework'
+    s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
 
 end
