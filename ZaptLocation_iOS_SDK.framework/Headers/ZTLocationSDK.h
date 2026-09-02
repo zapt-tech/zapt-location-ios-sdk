@@ -10,6 +10,11 @@
 
 #import "ZTHttpService.h"
 #import "ZTLogger.h"
+#import <WebKit/WebKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+typedef void (^PermissionCompletionHandler)(BOOL granted);
 
 //! Project version number for ZaptLocation_iOS_SDK.
 FOUNDATION_EXPORT double ZaptLocation_iOS_SDKVersionNumber;
@@ -43,15 +48,25 @@ FOUNDATION_EXPORT const unsigned char ZaptLocation_iOS_SDKVersionString[];
 
 @property (retain) ZTHttpService *notifier;
 
+@property (nonatomic, copy) PermissionCompletionHandler permissionCompletion;
+
 - (instancetype)initWithVisitableId :(NSString *)visitableId;
 - (void)start;
 - (void)stop;
 - (void)requestPermissions;
+- (void)requestPermissions:(nullable PermissionCompletionHandler)completion;
 - (void)requestPermissionsBackground;
+- (CLAuthorizationStatus)getLocationPermissionStatus;
 - (NSString*)getMapLink;
 - (NSString*)getInterestLink:(NSString *)interestId;
 
+/// Attaches the SDK-managed web view bridges to the provided web view.
+- (void)attachWebViewBridges:(WKWebView *)webView;
+/// Detaches SDK-managed web view bridges from any attached web view.
+- (void)detachWebViewBridges;
 
 - (ZTLogger*) getLogger;
 
 @end
+
+NS_ASSUME_NONNULL_END
