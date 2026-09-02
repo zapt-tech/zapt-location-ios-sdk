@@ -18,7 +18,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "ZaptLocation_iOS_SDK",
-            path: "ZaptLocation_iOS_SDK.framework"
+            path: "ZaptLocation_iOS_SDK.xcframework"
         )
     ]
 )
